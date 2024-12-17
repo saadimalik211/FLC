@@ -1,0 +1,90 @@
+extends  ../_skeleton
+
+block variables
+	- var activeCategory = 'about us'
+	- var pageName = 'About Us'
+
+block page 
+	// Page Header
+	include ../sections/_header-minimal
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName]
+	})
+
+	// Overview
+	section.section.section-lg
+		.container
+			.row.row-50.justify-content-center.justify-content-lg-between
+				.col-md-10.col-lg-6
+					h3.wow-outer: span.wow.slideInDown A Few Words About Us
+					p.heading-subtitle.wow-outer: span.wow.slideInDown(data-wow-delay='.05s') R&CO is a team of highly talented, experienced, and award-winning architects and designers.
+					p.font-roboto.wow-outer: span.wow.slideInDown(data-wow-delay='.1s') Our company has been the leading provider of architecture services to clients throughout the USA since 1999. We pay attention to every demand of our customers.
+					.group.group-middle
+						a.button.button-primary.button-winona(href='#our-history' data-waypoint-to='#our-history') view projects
+						a.button.button-black-outline.button-winona(href='careers.html') Read more
+
+				.col-md-10.col-lg-6.col-xl-5
+						+png('large-features-1-470x334', 'img-responsive')
+		
+	include ../sections/_section-our-history
+		
+	// Who We Are
+	section.section.section-lg.section-last.text-center
+		.container
+			h3 Who We Are
+			.row.row-50
+				.col-sm-6.col-lg-4
+					// Profile Minimal
+					article.profile-minimal
+						+jpg('team-1-370x368', 'profile-minimal-image')
+						.profile-minimal-caption
+							h4.profile-minimal-title John Thompson
+							p.profile-minimal-position Founder, Director
+
+				.col-sm-6.col-lg-4
+					// Profile Minimal
+					article.profile-minimal
+						+jpg('team-2-370x368', 'profile-minimal-image')
+						.profile-minimal-caption
+							h4.profile-minimal-title Ann Payne
+							p.profile-minimal-position Senior Architect
+
+				.col-sm-6.col-lg-4
+					// Profile Minimal
+					article.profile-minimal
+						+jpg('team-3-370x368', 'profile-minimal-image')
+						.profile-minimal-caption
+							h4.profile-minimal-title Nathan Porter
+							p.profile-minimal-position Interior Designer
+
+				.col-sm-6.col-lg-4
+					// Profile Minimal
+					article.profile-minimal
+						+jpg('team-4-370x368', 'profile-minimal-image')
+						.profile-minimal-caption
+							h4.profile-minimal-title Marie Fernandez
+							p.profile-minimal-position Exterior Designer
+
+				.col-sm-6.col-lg-4
+					// Profile Minimal
+					article.profile-minimal
+						+jpg('team-5-370x368', 'profile-minimal-image')
+						.profile-minimal-caption
+							h4.profile-minimal-title Sam Williams
+							p.profile-minimal-position Landscape Designer
+
+				.col-sm-6.col-lg-4
+					// Profile Minimal
+					article.profile-minimal
+						+jpg('team-6-370x368', 'profile-minimal-image')
+						.profile-minimal-caption
+							h4.profile-minimal-title Kate Wilson
+							p.profile-minimal-position Project Manager
+
+	// Page Footer
+	include ../sections/_footer-standard
+	+footer-standard({
+		about: 'R&CO company is a diversified global architecture company that brings the best designers and architects together. We have been offering great design solutions to individual and corporate customers worldwide since the late 1990s.'
+	})

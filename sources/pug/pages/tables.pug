@@ -1,0 +1,22 @@
+extends  ../_skeleton
+
+//- Includes
+block variables
+	- var activeCategory = 'pages'
+	- var pageName = 'Tables'
+
+block page
+	include ../sections/_header-minimal
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName]
+	})
+
+	include ../sections/_section-job-positions
+
+	// Page Footer
+	include ../sections/_footer-standard
+	+footer-standard({
+		about: 'R&CO company is a diversified global architecture company that brings the best designers and architects together. We have been offering great design solutions to individual and corporate customers worldwide since the late 1990s.'
+	})

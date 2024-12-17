@@ -1,0 +1,104 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-progress-bar-linear
+include ../components/_ui-career-classic
+
+block variables
+	- var activeCategory = 'services'
+	- var pageName = 'Single Service'
+
+block page 
+	// Page Header
+	include ../sections/_header-minimal
+
+	+breadcrumbs({
+		bgImage: 'breadcrumbs-image-3' ,
+		category: activeCategory,
+		path: [pageName]
+	})
+	
+	include ../sections/_section-small-features
+
+	// About This Service
+	section.section.section-lg
+		.container
+			.row.row-50.justify-content-center.justify-content-lg-between.flex-lg-row-reverse
+				.col-lg-6.col-xl-5: .inset-right-3
+					h3 About This Service
+					h5 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					a.button.button-lg.button-primary.button-winona(href='#') Learn more
+
+				.col-lg-6
+					+jpg('single-service-1-551x385', 'img-responsive')
+
+	// Pricing
+	section.section.section-lg.bg-gray-100
+		.container
+			h3.text-center Pricing
+			include ../includes/_row-pricing-3-columns
+
+	section.section.section-md.bg-primary.text-center
+		.container
+			.box-cta-1
+				h3 We Offer Quality #[span.fw-bold Architecture Services]
+				a.button.button-lg.button-black-outline.button-winona(href='#') Free consultation
+
+	// Testimonials
+	section.section.section-lg.text-center
+		.container
+			h3.wow-outer: span.wow.slideInDown Testimonials
+			// Owl Carousel
+			.owl-carousel.wow.fadeIn(
+			data-items='1'
+			data-md-items='2'
+			data-lg-items='3'
+			data-dots='true'
+			data-nav='false'
+			data-loop='false'
+			data-margin='30'
+			data-stage-padding='0'
+			data-mouse-drag="false")
+				blockquote.quote-classic
+					.quote-classic-meta
+						.quote-classic-avatar: +jpg('testimonials-person-3-96x96')
+						.quote-classic-info
+							cite.quote-classic-cite Albert Webb
+							p.quote-classic-caption CEO at Majestic
+					.quote-classic-text
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+				blockquote.quote-classic
+					.quote-classic-meta
+						.quote-classic-avatar: +jpg('testimonials-person-1-96x96')
+						.quote-classic-info
+							cite.quote-classic-cite Kelly McMillan
+							p.quote-classic-caption Private Entrepreneur
+					.quote-classic-text
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+				blockquote.quote-classic
+					.quote-classic-meta
+						.quote-classic-avatar: +jpg('testimonials-person-2-96x96')
+						.quote-classic-info
+							cite.quote-classic-cite Harold Barnett
+							p.quote-classic-caption Regional Manager
+					.quote-classic-text
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+				blockquote.quote-classic
+					.quote-classic-meta
+						.quote-classic-avatar: +jpg('testimonials-person-5-96x96')
+						.quote-classic-info
+							cite.quote-classic-cite Bill Warner
+							p.quote-classic-caption Freelancer
+					.quote-classic-text
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+	// Page Footer
+	include ../sections/_footer-standard
+	+footer-standard({
+		about: 'R&CO company is a diversified global architecture company that brings the best designers and architects together. We have been offering great design solutions to individual and corporate customers worldwide since the late 1990s.'
+	})

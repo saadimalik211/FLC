@@ -1,0 +1,25 @@
+-
+	function getImageSize(name) {
+		try { return name.match('[0-9]+(x)[0-9]+')[0].split('x'); }
+		catch ( error ) {
+			throw new Error('Error in function getImageSize:\n' + error);
+		}
+	}
+
+	//- Get menu branch by category name
+	function getMenuCategory(category) {
+		for (var i = 0; i < menu.length; i++) {
+			if (menu[i].category === category) {
+				return menu[i];
+			}
+		}
+		return undefined;
+	}
+
+	//- Any page title to *.html link
+	function nameToLink(name) {
+		try { return name.trim().replace(/\s/g, '-').replace(/[\(\)]/g, '').toLowerCase() + '.html'; }
+		catch ( error ) {
+			throw new Error('Error in function nameToLink:\n' + error);
+		}
+	}

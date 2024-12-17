@@ -1,0 +1,25 @@
+extends  ../_skeleton
+
+block variables
+	- var activeCategory = 'projects'
+	- var pageName = 'Projects'
+
+block page 
+	// Page Header
+	include ../sections/_header-minimal
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName]
+	})
+
+		// Our Projects
+	section.section.section-lg.bg-gray-lighten.text-center.bg-gray-100
+		.container
+			include ../includes/_isotope-row-masonry
+
+	// Page Footer
+	include ../sections/_footer-standard
+	+footer-standard({
+		about: 'R&CO company is a diversified global architecture company that brings the best designers and architects together. We have been offering great design solutions to individual and corporate customers worldwide since the late 1990s.'
+	})

@@ -1,0 +1,95 @@
+-
+	var
+		htmlClass = "wide wow-animation",
+		fonts = "//fonts.googleapis.com/css?family=Work+Sans:300,700,800%7CRoboto+Condensed:300,400,700%7CRoboto:300,400,500,700,900",
+		navbarCounter = 0,
+		logo = {
+			name: 'CaseCraft',
+			default: { trueSize: 'logo-default-109x27', retina: 'logo-default-109x27' },
+			light: { trueSize: 'logo-inverse-109x27', retina: 'logo-inverse-109x27' },
+			inverse: { trueSize: 'logo-light-141x21', retina: 'logo-light-281x45' }
+		},
+		links = {
+			post: 'single-blog-post.html',
+			getTemplate: 'https://themeforest.net/item/casecraft-elegant-business-and-financial-company-multipage-html-template/21536362'
+		},
+		colors = {
+			primary: '#af8855'
+		},
+		menu = [
+			{
+				title: 'Home',
+				category: 'home',  
+				link: 'index.html'
+			},
+			{
+				title: 'About us',
+				category: 'about us',
+				link: 'about-us.html'
+			},
+			{
+				title: 'Projects',
+				category: 'projects',
+				link:'projects.html',
+				dropdown: [
+					{ title: 'Single Project' }
+				]
+			},
+			{
+				title: 'Services',
+				category: 'services',
+				dropdown: [
+					{ title: 'Single Service' }
+				]
+			},
+			{
+				title: 'Blog',
+				category: 'blog',
+				link: 'sidebar-blog.html',
+				dropdown: [
+					{ title: 'Single Blog Post'},
+					{ title: 'Sidebar Blog'}
+				]
+			},
+			{
+				title: 'Pages',
+				category: 'pages',
+				link: '#',
+				megamenu: [
+					{
+						list: [
+							{ title: 'Typography' },
+							{ title: 'Buttons' },
+							{ title: 'Forms' },
+							{ title: 'Progress bars' },
+							{ title: 'Tabs' },
+							{ title: 'Tables' },
+							{ title: 'Accordions' }
+						]
+					},
+					{
+						list: [
+							{ title: '404 Page' },
+							{ title: '503 Page' },
+							{ title: 'Coming Soon' },
+							{ title: 'Testimonials' },
+							{ title: 'Under Construction' },
+							{ title: 'Search results' },
+							{ title: 'Privacy policy' }
+						]
+					},
+					{
+						list: [
+						{ title: 'Careers' },
+						{ title: 'Services' },
+						{ title: 'Single Job' },
+						{ title: 'Pricing' }
+						]
+					}
+				]
+			},
+			{
+				title: 'Contacts',
+				category: 'contacts'
+			}
+		];
