@@ -11,5 +11,9 @@
   "description": "",
   "devDependencies": {
     "sass": "^1.82.0"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5",
+    "webp-converter-cli": "^0.0.5"
   }
 }
